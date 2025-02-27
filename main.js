@@ -262,7 +262,6 @@ console.log(
 /* Заполните массив целыми числами от 1 до 10. */
 
 const arr = [];
-
 for (let i = 1; i < 11; i++) {
   arr.push(i);
 }
@@ -271,10 +270,32 @@ console.log(arr);
 /* Заполните массив четными числами из промежутка от 1 до 100. */
 
 const arr1 = [];
-
 for (let i = 1; i < 101; i++) {
   if (i % 2 === 0) {
     arr1.push(i);
   }
 }
 console.log(arr1);
+
+/* Округлите эти дроби до одного знака в дробной части. */
+
+const arr2 = [1.456, 2.125, 3.32, 4.1, 5.34];
+
+console.log(arr2.map((item) => item.toFixed(1)));
+console.log(typeof arr2[0]);
+
+/* Дан массив со строками. Оставьте в этом массиве только те строки, которые начинаются на http://. */
+
+const arrHttp = [
+  "http://code.mu/ru/javascript/tasker/stager/1/9/",
+  "https://web.telegram.org/a/#-4717422717",
+  "http://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/round",
+  "http://devel",
+];
+/* console.log(arrHttp.filter((item) => item.includes("http://"))); */
+arrHttp.map(function (item) {
+  if (!item.includes("http:")) {
+    item.delete;
+  }
+});
+caonsole.log(arrHttp);
